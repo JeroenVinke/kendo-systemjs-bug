@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kendo test</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+
+  <body aurelia-app="main">
+
+    <button id="button">my button</button>
+
+    <script src="jspm_packages/system.js"></script>
+    <script src="config.js"></script>
+    <script>
+      System.import('kendo-ui/js/kendo.button.min.js')
+      .then(() => {
+        jQuery("#button").kendoButton({
+          click: () => alert('button clicked')
+        });
+      });
+    </script>
+  </body>
+</html>
